@@ -1,0 +1,84 @@
+= SlideShow (S9) patch -- 
+
+Please 
+
+* Note this is not the original gem slideshow, only a (useful?) patch.
+* For information about how to install and use SlideShow, go to http://slideshow.rubyforge.org/
+
+== Changes in this patch (relatives to slideshow 0.6.1)
+
+I'm maniatic about separate source from build products, but slideshow
+outputs files where it founds the input file. More: slideshow
+only support the input file at current path, i .e.
+ 
+	slideshow ./src/sample.textile 
+
+don't works.
+
+I'm maniatic, so 
+* added support for full and relative paths in input file name, 
+* added an extra option "-o my/output/path". 
+
+Now, I can run
+
+	slideshow -o slides1 src/sample.textile
+
+and I get my slides in slides1 directory. 
+
+If no -o is given, the ouput is writen to directory "slides" (relative to current),
+but you can "-o ." for backward compatibility. 
+
+== Install
+
+ We are waiting for this patch be merged in the main line of SlideShow. This will be notified here.
+
+ For now, you need first install the gem slideshow 0.6.1, and then owerwrite files at this repo.
+
+= slideshow
+
+* FIX (url)
+
+== DESCRIPTION:
+
+FIX (describe your package)
+
+== FEATURES/PROBLEMS:
+
+* FIX (list of features or problems)
+
+== SYNOPSIS:
+
+  FIX (code sample of usage)
+
+== REQUIREMENTS:
+
+* FIX (list of requirements)
+
+== INSTALL:
+
+* FIX (sudo gem install, anything else)
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2009 FIXME full name
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
